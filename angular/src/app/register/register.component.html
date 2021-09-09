@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card shadow bg-light">
+                <div class="card-body">
+                  <h2 class="card-title mb-4 text-center ">Create new account</h2>
+                  <form  (ngSubmit)="onSubmit(formref)" #formref="ngForm">
+                    <div id="Input">
+                    <div class="mb-4">
+                      <label for="mail" class="form-label" style=" font-size: 18px;font-weight: bold;"><span class="teal" >*</span>Email</label>
+                      <input type="email" class="form-control" id="mail" placeholder="Enter Email address" name="email" required ngModel #refemail="ngModel" > 
+                      <p class="warnings" *ngIf="(formref.submitted ||  refemail.touched)&&(refemail.errors?.required)">*
+                        email is required</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="name" class="form-label" style=" font-size: 18px;font-weight: bold;"><span class="teal">*</span>Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Display name" name="username" required ngModel #refname="ngModel"> 
+                        <p class="warnings" *ngIf="(formref.submitted || refname.touched)&&(refname.errors?.required)">*
+                          name is required</p>
+                      </div>
+                    <div class="mb-4">
+                      <label for="pass1" class="form-label" style=" font-size: 18px;font-weight: bold;"><span class="teal">*</span>Password</label>
+                      <input type="password" class="form-control" id="pass1" placeholder="Enter Password" required ngModel #refpassword="ngModel" minlength="8" name="password" >
+                      <p class="warnings"
+                      *ngIf="(formref.submitted || refpassword.touched)&&(refpassword.errors?.required)">* password is
+                      required</p>
+                      <p class="warnings"
+                        *ngIf="(formref.submitted || refpassword.touched)&&(refpassword.errors?.minlength)"> password length should be atleast 8
+                      </p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="pass2" class="form-label" style=" font-size: 18px;font-weight: bold;"><span class="teal">*</span>Re-enter password</label>
+                        <input type="password" class="form-control" id="pass2" placeholder="Confirm Password" required ngModel name="confirm" #refpassword="ngModel" >
+                        <p class="warnings"
+                        *ngIf="(formref.submitted || refpassword.touched)&&(refpassword.errors?.required)">* password is
+                        required</p>
+                        <p class="warnings"
+                          *ngIf="(formref.submitted || refpassword.touched)&&(refpassword.errors?.minlength)"> password length should be atleast 8
+                        </p>
+                        <p class="warnings"
+                          *ngIf="pass"
+                        >*doesnt match with password
+                        </p>
+                       
+                      </div>
+                    <div class="mt-4 text-center">
+                        <button type="submit" class="btn ">Sign Up</button>
+                    </div>
+                  </div>
+                  </form>
+                </div>
+
+              </div>
+        </div>
+    </div>
+</div>

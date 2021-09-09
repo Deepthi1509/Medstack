@@ -1,0 +1,10 @@
+.bin{
+    color: #0c6772;
+    background-color: #ffb8a7;
+    border: #ffb8a7;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+.bin:hover{
+    box-shadow: 0px 3px 3px #0c6772;
+}

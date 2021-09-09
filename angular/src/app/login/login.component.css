@@ -1,0 +1,81 @@
+.card
+{
+    background-color: white;
+    border-radius: 50px;
+}
+
+    #login-button {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        padding: 15px 50px;
+        color: #fff;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px; 
+    }
+    #login-button::after {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease; 
+    }
+    #login-button:hover::after, 
+    #login-button:active::after {
+            width: 100%; 
+    }
+    #login-button {
+        background: #138592;
+        color: #fff; 
+    }
+    #login-button::after {
+            background: #ffb8a7; 
+    }
+    #login-button:visited {
+            color: #fff; 
+    }
+    #login-button:hover {
+            color: #fff; 
+    }
+
+
+a{
+    text-decoration: none;
+    color: #138592;
+    font-size: 15px;
+}
+a:hover{
+    text-decoration: underline;
+    color: #138592;
+}
+.btn
+{
+    text-decoration: none;
+    color: #138592;
+    font-size: 15px;
+}
+.btn:hover{
+    text-decoration: underline;
+    color: #138592;
+}
+.form-control {
+    
+  font-size: 18px;
+  height: 55px;
+  padding-left: 20px;
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.4);
+ 
+  outline: none;
+}

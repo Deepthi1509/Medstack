@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card shadow bg-light ">
+                <div class="card-body">
+                  <h2 class="card-title mb-4 text-center ">Login/Signin</h2>
+                  <form class="content" #ref="ngForm" (ngSubmit)="onLogin(ref)">
+                    <div class="mb-4">
+                      <label for="mail" class="form-label" style=" font-size: 18px;font-weight: bold;"><span class="teal" >*</span>Email</label>
+                      <input type="email" class="form-control" id="mail" placeholder="Enter Email address" name="email" required ngModel> 
+                    </div>
+                    <div class="mb-4">
+                      <label for="pass" class="form-label" style=" font-size: 18px;font-weight: bold;"><span class="teal">*</span>Password</label>
+                      <input type="password" class="form-control" id="pass" placeholder="Enter Password" name="password" required ngModel>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <button type="submit" class="btn " id="login-button">Login</button>
+                    </div>
+                    
+
+                  </form>
+                </div>
+
+                <div class="card-footer text-center pt-3">
+                    <div class="d-flex justify-content-evenly">
+                        <p class="">Don't have an account?</p>
+                        
+                        <button class="btn " (click)="onCreate()"><i class="far fa-hand-point-right"></i> Create a new acccount</button>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+   
+</div>

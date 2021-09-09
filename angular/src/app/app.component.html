@@ -1,0 +1,44 @@
+<div  >
+  <div  >
+  <nav class="navbar navbar-expand-lg navbar-light  ">
+    <div class="container-fluid me-3">
+      <a class="navbar-brand " href="#"><img src="assets/navbar2.png"  alt="medtsack" width="180px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto  fs-5 text-white">
+        <li class="nav-item me-5 mb-2 ">
+          <a  class="order nav-link active " aria-current="page" routerLink="medicines" routerLinkActive="active" style="font-size:17px;font-family:poppins,sans-serif;margin: 3px 0px 0px;padding: 13px 40px;border-radius: 20px;font-weight: 700;">Medicines </a>
+        </li>
+        <li class="nav-item me-5 mb-2">
+          <a class="order nav-link active" aria-current="page" routerLink="healthcare-products" routerLinkActive="active" style="font-size:17px;font-family:poppins,sans-serif;margin: 3px 0px 0px;padding: 12px 15px;border-radius: 20px;font-weight: 700;">Healthcare-Products</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav ms-auto  fs-5 text-white">
+          <li class="nav-item me-2" *ngIf="dob.status">
+            <a class="nav-link active text-white" aria-current="page" routerLink="profile" routerLinkActive="active" style="font-size:25px;font-family:poppins,sans-serif;">Profile</a>
+          </li>
+          <li class="nav-item me-2" *ngIf="dob.status">
+            <a class="nav-link active text-white" aria-current="page" routerLink="cart" routerLinkActive="active" style="font-size:24px;font-family:poppins,sans-serif;"><i class="fas fa-shopping-cart me-2"></i>Cart</a>
+          </li>
+          
+          
+          <li class="nav-item me-2" *ngIf="!dob.status">
+            <a class="nav-link active text-white" aria-current="page" routerLink="login" routerLinkActive="active" style="font-size:17px;font-family:poppins,sans-serif;"><img src="assets/contact.png" width="30px" style="margin-right: 2px;"/>SIGN IN</a>
+          </li>
+          <li class="nav-item me-2" *ngIf="dob.status" (click)="dob.userLogout()">
+            <a class="nav-link active text-white" aria-current="page" routerLink="login" routerLinkActive="active" style="font-size:24px;font-family:poppins,sans-serif;">Logout</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<router-outlet ></router-outlet>
+
+<app-footer></app-footer>
+</div>

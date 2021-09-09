@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <div class="pb-5" > <input class="p-3 shadow-sm form-control text-uppercase d-block mx-auto w-75" type="text" [(ngModel)]="searchTerm" placeholder="search "  ></div>
+    
+    <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let med of health| search:searchTerm| paginate: { 
+            itemsPerPage: 4,
+            currentPage: p,
+            totalItems:totitems
+         };let ind=index">
+            <div class="card text-dark h-100">
+                <a class="btn h-100" (click)="onImg(ind,med)">
+                    <img src={{med.image}} class="card-img-top w-25 h-100 d-block m-auto mt-2" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title mb-4">{{med.name}}</h5>
+                    <div class="d-flex justify-content-between ">
+                        <h6 class="card-text">MRP: <i class="fas fa-rupee-sign"></i> {{med.price}}</h6>
+                        <button class="btn bin btn-success fw-bold" (click)="onCart(med)">add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="text-center pagi">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>

@@ -1,0 +1,17 @@
+.navbar
+{
+    background-color: #138592;
+}
+.order{
+    background-color: white;
+    
+}
+.order:hover{
+    background-color: #ffb8a7;
+}
+.order:active{
+    background-color: #ffb8a7;
+}
+active{
+    text-decoration: underline;
+}
